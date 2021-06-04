@@ -72,6 +72,11 @@ public class Manager : MonoBehaviour
         
     }
 
+    public int GetActiveScene()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
+    }
+
     public void SetName(string value)
     {      
         inventionName = value;

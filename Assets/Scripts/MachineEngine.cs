@@ -8,14 +8,10 @@ public class MachineEngine : MonoBehaviour
     [SerializeField] Transform spawnLoc;
     [SerializeField] ElementBehavior element;
     public int row;
-    //SpriteRenderer newElement;
-    //Vector2 target;
-    //float timer;
-    //List<SpriteRenderer> icons = new List<SpriteRenderer>();
     public bool isStopped;
     float timeInterval;
     float speed;
-
+    int index = 0;
 
     void Update()
     {
@@ -46,7 +42,23 @@ public class MachineEngine : MonoBehaviour
 
     public Sprite SetSprite()
     {
-        int index = Random.Range(0, 52);
+        
+        if (FindObjectOfType<Manager>().GetActiveScene() == 0 )
+        {
+         index = Random.Range(0, 52);
+        }
+        else //If in demo
+        {
+            if(index < 9)
+            {
+                index++;
+            }
+            else
+            {
+                index = 0;
+            }
+                    
+        }
         return sprites[index];
     }
 
