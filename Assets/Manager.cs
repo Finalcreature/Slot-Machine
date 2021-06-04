@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using PlayFab;
+using PlayFab.ClientModels;
 
 public class Manager : MonoBehaviour
 {
     public ElementBehavior[] elements = new ElementBehavior[3];
     [SerializeField] Image[] images;
     [SerializeField] InputField input;
-    string inventionName;
+    public string inventionName;
+    public bool isChosen;
 
     private void Awake()
     {
@@ -29,7 +32,7 @@ public class Manager : MonoBehaviour
         {
          Memory.isReadyToSet = false;
          input.gameObject.SetActive(false);
-
+        isChosen = false;
         }
 
     private void Update()
@@ -81,5 +84,6 @@ public class Manager : MonoBehaviour
     {      
         inventionName = value;
         print(inventionName);
+        isChosen = true;
     }
 }
