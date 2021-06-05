@@ -55,16 +55,20 @@ public class MachineEngine : MonoBehaviour
             }
             else
             {
-                index = 0;
+                index = 1;
             }
                     
         }
-        return sprites[index];
+        return sprites[index - 1];
     }
 
     public void NextObject(float xPos)
-    {
+    {     
         row++;
+        if (row == 9)
+        {
+            row = 0;
+        }
         ElementBehavior newElement =  Instantiate(element, new Vector2(xPos,1.7f), transform.rotation);
         newElement.machine = this;
     }
