@@ -12,8 +12,8 @@ public class Manager : MonoBehaviour
     [SerializeField] InputField input;
     public string inventionName;
     public bool isChosen;
-    public Text text;
-    char[] charArrayForText = new char[4];
+    public InputField IF;
+    char[] charArrayForIF = new char[3];
 
     private void Awake()
     {
@@ -86,14 +86,5 @@ public class Manager : MonoBehaviour
         inventionName = value;
         print(inventionName);
         //isChosen = true;
-    }
-    public void DropLine()
-    {
-        if (text.text.Length == 3)
-        {
-            charArrayForText = text.text.ToCharArray();
-            
-
-        }
     }
 }
