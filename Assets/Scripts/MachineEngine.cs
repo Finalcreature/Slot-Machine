@@ -21,7 +21,7 @@ public class MachineEngine : MonoBehaviour
             isStopped = true;
        }
     }
-
+    
     public float GetSpeed()
     {
         return speed;

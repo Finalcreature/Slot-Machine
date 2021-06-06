@@ -21,7 +21,14 @@ public class Manager : MonoBehaviour
                             "Hyper-Intelligent Transportation Engineer", "Pharmaceutical Artisan",
                             "Extinct Species Revivalist", "Personal Education Guide", "Personal Health Lifestyle Guide" };
     [SerializeField] Sprite[] icons;
-
+    public void GetNewTitleText(string inputText)
+    {
+        LikeManager.inputTitleText = inputText;
+    }
+    public void GetDiscribeText(string inputText)
+    {
+        LikeManager.inputDiscribeText = inputText;
+    }
     private void Awake()
     {
         int gameStatusCount = FindObjectsOfType<Manager>().Length;
@@ -47,6 +54,10 @@ public class Manager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            LoadNextScene();
+        }
         if (Memory.isReadyToSet)
         {
             Memory.isReadyToSet = false;
