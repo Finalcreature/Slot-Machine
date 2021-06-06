@@ -8,13 +8,16 @@ public class Manager : MonoBehaviour
 {
     public ElementBehavior[] elements = new ElementBehavior[3];
     [SerializeField] Image[] images;
-    [SerializeField] InputField input;
+    [SerializeField] InputField inputTitle, inputDescription;
     public string inventionName;
     [SerializeField] Text example;
     [SerializeField] GameObject panel;
     [SerializeField] Image icon;
     bool isShowing;
     public bool isChosen;
+    string inventionDesc;
+    string exampleName;
+    int completionIndexForInputFields;
 
     public string[] inventions = {"Solar-based Drone", "Wind Energy Technician", "Urban Agriculture Specialis",
                             "Organizational Disrupter", "Urban Security Coordinator",
@@ -40,8 +43,10 @@ public class Manager : MonoBehaviour
         {
             isShowing = false;
             Memory.isReadyToSet = false;
-            input.gameObject.SetActive(false);
-            panel.SetActive(false);
+            inputTitle.gameObject.SetActive(false);
+            inputDescription.gameObject.SetActive(false);
+        panel.SetActive(false);
+        completionIndexForInputFields = 0;
 
         }
 
@@ -106,7 +111,8 @@ public class Manager : MonoBehaviour
         {
             Destroy(machine.gameObject);
         }
-        input.gameObject.SetActive(true);
+        inputTitle.gameObject.SetActive(true);
+        inputDescription.gameObject.SetActive(true);
 
         SetInvention(inventions[FindObjectOfType<MachineEngine>().row]);
         icon.sprite = icons[FindObjectOfType<MachineEngine>().row];
@@ -127,8 +133,26 @@ public class Manager : MonoBehaviour
     public void SetInvention(string value)
     {      
         inventionName = value;
-        example.text = value;
-        
+        completionIndexForInputFields++;
+        if(completionIndexForInputFields == 2)
+        {
+
+        }
+    }
+
+    public void SetInventionDescription(string value)
+    {
+        inventionDesc = value;
+        completionIndexForInputFields++;
+        if (completionIndexForInputFields == 2)
+        {
+
+        }
+    }
+
+    public void SetExampleName(/*here put index of the three elements or something*/)  
+    {
+        //example.text = 
     }
 
     public void ShowPanel()
@@ -136,4 +160,6 @@ public class Manager : MonoBehaviour
         isShowing = !isShowing;
         panel.SetActive(isShowing);
     }
+
+   
 }
