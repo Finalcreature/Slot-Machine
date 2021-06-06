@@ -19,9 +19,9 @@ public class Manager : MonoBehaviour
     public static string  inventionDesc;
     string exampleName;
 
-    public string[] inventions = {"Solar-based Drone", "Wind Energy Technician", "Urban Agriculture Specialis",
+    public string[] inventions = {"Solar Drone Operator", "Wind Energy Technician", "Urban Agriculture Specialis",
                             "Organizational Disrupter", "Urban Security Coordinator",
-                            "Hyper-Intelligent Transportation Engineer", "Pharmaceutical Artisan",
+                            "Hyper-Intelligent Transportation Engineer", "Artisan Pharmacist",
                             "Extinct Species Revivalist", "Personal Education Guide", "Personal Health Lifestyle Guide" };
     [SerializeField] Sprite[] icons;
     public void GetNewTitleText(string inputText)

@@ -2173,7 +2173,7 @@ MonoBehaviour:
   example: {fileID: 1820101332}
   panel: {fileID: 1084623468}
   icon: {fileID: 1656795485}
-  paintSceneLoadButton: {fileID: 0}
+  paintSceneLoadButton: {fileID: 958470312}
   isChosen: 0
   inventions:
   - Solar-based Drone

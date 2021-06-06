@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         previewLogo.gameObject.SetActive(true);
         previewLogo.GetComponent<Image>().sprite = Sprite.Create(capturedLogo, new Rect(0, 0, capturedLogo.width, capturedLogo.height), new Vector2(0.5f, 0.5f));
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Demo");
+        SceneManager.LoadScene(0);
 
     }
 }
