@@ -23,7 +23,7 @@ public class Paint : MonoBehaviour
         localScale = new Vector2(slider.value, slider.value);
         if (Input.touchCount > 0)
         {
-          Vector2 mousePos = Input.GetTouch(0).deltaPosition;
+            Vector2 mousePos = Input.GetTouch(0).position;
             Vector2 objPosition = Camera.main.ScreenToWorldPoint(mousePos);
             Instantiate(baseDot, objPosition, transform.rotation);
         }
