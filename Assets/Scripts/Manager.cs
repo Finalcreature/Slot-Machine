@@ -13,7 +13,7 @@ public class Manager : MonoBehaviour
     [SerializeField] Text example;
     [SerializeField] GameObject panel;
     [SerializeField] Image icon;
-    [SerializeField] Button paintSceneLoadButton;
+    [SerializeField] Button paintSceneLoadButton , exapleButton;
     bool isShowing;
     public static bool isScene;
     public bool isChosen;
@@ -49,9 +49,11 @@ public class Manager : MonoBehaviour
 
         void Start()
         {
+
         isScene = true;
             isShowing = false;
             Memory.isReadyToSet = false;
+         exapleButton.gameObject.SetActive(false);
             inputTitle.gameObject.SetActive(false);
             inputDescription.gameObject.SetActive(false);
         paintSceneLoadButton.gameObject.SetActive(false);
@@ -135,8 +137,9 @@ public class Manager : MonoBehaviour
         inputTitle.gameObject.SetActive(true);
         inputDescription.gameObject.SetActive(true);
         paintSceneLoadButton.gameObject.SetActive(true);
-
+        exapleButton.gameObject.SetActive(true);
         SetInvention(inventions[FindObjectOfType<MachineEngine>().row]);
+        example.text = inventions[FindObjectOfType<MachineEngine>().row];
         icon.sprite = icons[FindObjectOfType<MachineEngine>().row];
 
     }

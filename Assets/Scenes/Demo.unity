@@ -2174,6 +2174,7 @@ MonoBehaviour:
   panel: {fileID: 1084623468}
   icon: {fileID: 1656795485}
   paintSceneLoadButton: {fileID: 958470312}
+  exapleButton: {fileID: 1555846660}
   isChosen: 0
   inventions:
   - Solar-based Drone
