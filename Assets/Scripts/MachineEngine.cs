@@ -15,7 +15,7 @@ public class MachineEngine : MonoBehaviour
 
     void Update()
     {
-       if(Input.GetKeyDown(KeyCode.Space))
+       if(Input.GetKeyDown(KeyCode.Space) || Input.touchCount != 0)
        {
             speed = 0;
             isStopped = true;
