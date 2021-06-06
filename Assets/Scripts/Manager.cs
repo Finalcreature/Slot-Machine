@@ -15,6 +15,7 @@ public class Manager : MonoBehaviour
     [SerializeField] Image icon;
     [SerializeField] Button paintSceneLoadButton;
     bool isShowing;
+    public static bool isScene;
     public bool isChosen;
     public static string  inventionDesc;
     string exampleName;
@@ -48,6 +49,7 @@ public class Manager : MonoBehaviour
 
         void Start()
         {
+        isScene = true;
             isShowing = false;
             Memory.isReadyToSet = false;
             inputTitle.gameObject.SetActive(false);
@@ -66,7 +68,10 @@ public class Manager : MonoBehaviour
     }
     private void Update()
     {
+        if(isScene == true)
+        {
         EnableDrawButton();
+        }
 
         if (Memory.isReadyToSet)
         {
@@ -172,6 +177,7 @@ public class Manager : MonoBehaviour
     public void LoadPaintScene()
     {
         SceneManager.LoadScene(1);
+        isScene = false;
     }
 
    
