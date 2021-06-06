@@ -147,7 +147,7 @@ public class Manager : MonoBehaviour
         completionIndexForInputFields++;
         if(completionIndexForInputFields == 2)
         {
-
+            SceneManager.LoadScene("SampleScene");
         }
     }
 
@@ -157,7 +157,7 @@ public class Manager : MonoBehaviour
         completionIndexForInputFields++;
         if (completionIndexForInputFields == 2)
         {
-
+            SceneManager.LoadScene("SampleScene");
         }
     }
 
