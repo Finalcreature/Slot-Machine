@@ -24,7 +24,7 @@ public class ScreenShotCamera : MonoBehaviour
             renderResult.ReadPixels(rect, 0, 0);
 
             byte[] byteArray = renderResult.EncodeToPNG();
-            System.IO.File.WriteAllBytes(Application.dataPath + "/Resources/Sprite/CameraScreenshot.png" , byteArray);
+            System.IO.File.WriteAllBytes(Application.dataPath + "/Resources/CameraScreenshot.png" , byteArray);
             RenderTexture.ReleaseTemporary(renderTextuer);
             myCamera.targetTexture = null;
         }

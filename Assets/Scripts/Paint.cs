@@ -42,7 +42,7 @@ public class Paint : MonoBehaviour
     {
        
         yield return new WaitForSeconds(3);
-        fuckit = Resources.Load<Sprite>("Sprite/CameraScreenshot");
+        fuckit = Resources.Load<Sprite>("CameraScreenshot");
         SceneManager.LoadScene(2);
     }
 }
