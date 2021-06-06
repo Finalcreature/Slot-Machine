@@ -9,13 +9,13 @@ public class Manager : MonoBehaviour
     public ElementBehavior[] elements = new ElementBehavior[3];
     [SerializeField] Image[] images;
     [SerializeField] InputField inputTitle, inputDescription;
-    public string inventionName;
+    public static string inventionName;
     [SerializeField] Text example;
     [SerializeField] GameObject panel;
     [SerializeField] Image icon;
     bool isShowing;
     public bool isChosen;
-    string inventionDesc;
+    string static inventionDesc;
     string exampleName;
     int completionIndexForInputFields;
 
