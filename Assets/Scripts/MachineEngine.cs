@@ -43,7 +43,7 @@ public class MachineEngine : MonoBehaviour
     public Sprite SetSprite()
     {
         
-        if (FindObjectOfType<Manager>().GetActiveScene() == 0 )
+        if (FindObjectOfType<Manager>().GetActiveScene() != 0 )
         {
          index = Random.Range(0, 52);
         }
