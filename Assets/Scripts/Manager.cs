@@ -13,11 +13,11 @@ public class Manager : MonoBehaviour
     [SerializeField] Text example;
     [SerializeField] GameObject panel;
     [SerializeField] Image icon;
+    [SerializeField] Button paintSceneLoadButton;
     bool isShowing;
     public bool isChosen;
     public static string  inventionDesc;
     string exampleName;
-    int completionIndexForInputFields;
 
     public string[] inventions = {"Solar-based Drone", "Wind Energy Technician", "Urban Agriculture Specialis",
                             "Organizational Disrupter", "Urban Security Coordinator",
@@ -52,13 +52,15 @@ public class Manager : MonoBehaviour
             Memory.isReadyToSet = false;
             inputTitle.gameObject.SetActive(false);
             inputDescription.gameObject.SetActive(false);
+        paintSceneLoadButton.gameObject.SetActive(false);
         panel.SetActive(false);
-        completionIndexForInputFields = 0;
 
         }
 
     private void Update()
     {
+
+
         if (Input.GetKeyDown(KeyCode.A))
         {
             LoadNextScene();
@@ -124,6 +126,7 @@ public class Manager : MonoBehaviour
         }
         inputTitle.gameObject.SetActive(true);
         inputDescription.gameObject.SetActive(true);
+        paintSceneLoadButton.gameObject.SetActive(true);
 
         SetInvention(inventions[FindObjectOfType<MachineEngine>().row]);
         icon.sprite = icons[FindObjectOfType<MachineEngine>().row];
@@ -144,21 +147,12 @@ public class Manager : MonoBehaviour
     public void SetInvention(string value)
     {      
         inventionNameInManager = value;
-        completionIndexForInputFields++;
-        if(completionIndexForInputFields == 2)
-        {
-            SceneManager.LoadScene("SampleScene");
-        }
+        
     }
 
     public void SetInventionDescription(string value)
     {
         inventionDesc = value;
-        completionIndexForInputFields++;
-        if (completionIndexForInputFields == 2)
-        {
-            SceneManager.LoadScene("SampleScene");
-        }
     }
 
     public void SetExampleName(/*here put index of the three elements or something*/)  
@@ -170,6 +164,11 @@ public class Manager : MonoBehaviour
     {
         isShowing = !isShowing;
         panel.SetActive(isShowing);
+    }
+
+    public void LoadPaintScene()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 
    
