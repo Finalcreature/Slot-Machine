@@ -95,20 +95,23 @@ public class Manager : MonoBehaviour
     {
         foreach (ElementBehavior element in elements)
         {
-            if (element.machine.name == "Slot Machine")
+            if(element)
             {
-                images[0].sprite = element.GetComponent<SpriteRenderer>().sprite;
-            }
-            else if (element.machine.name == "Slot Machine (1)")
-            {
-                images[1].sprite = element.GetComponent<SpriteRenderer>().sprite;
-            }
-            else
-            {
-                images[2].sprite = element.GetComponent<SpriteRenderer>().sprite;
+                if (element.machine.name == "Slot Machine")
+                {
+                    images[0].sprite = element.GetComponent<SpriteRenderer>().sprite;
+                }
+                else if (element.machine.name == "Slot Machine (1)")
+                {
+                    images[1].sprite = element.GetComponent<SpriteRenderer>().sprite;
+                }
+                else
+                {
+                    images[2].sprite = element.GetComponent<SpriteRenderer>().sprite;
+                }
+             Destroy(element.gameObject);
             }
 
-            Destroy(element.gameObject);
         }
         foreach (MachineEngine machine in FindObjectsOfType<MachineEngine>())
         {

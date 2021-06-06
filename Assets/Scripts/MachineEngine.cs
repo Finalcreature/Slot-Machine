@@ -15,7 +15,7 @@ public class MachineEngine : MonoBehaviour
 
     void Update()
     {
-       if(Input.GetKeyDown(KeyCode.Space))
+       if(Input.GetKeyDown(KeyCode.Space) || Input.touchCount != 0)
        {
             speed = 0;
             isStopped = true;
@@ -43,7 +43,7 @@ public class MachineEngine : MonoBehaviour
     public Sprite SetSprite()
     {
         
-        if (FindObjectOfType<Manager>().GetActiveScene() == 0 )
+        if (FindObjectOfType<Manager>().GetActiveScene() != 0 )
         {
          index = Random.Range(0, 52);
         }

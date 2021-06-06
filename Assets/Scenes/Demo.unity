@@ -287,9 +287,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 110011278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f21602842276fa42865f907b0d4c09f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e76e0b62380ff44f899e6f7f7f91cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 110011280}
 --- !u!1 &148939035
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +548,17 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1479184770}
+        m_MethodName: SetInvention
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1479184770}
         m_MethodName: GetNewTitleText
         m_Mode: 0
@@ -1035,9 +1047,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 607729979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f21602842276fa42865f907b0d4c09f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e76e0b62380ff44f899e6f7f7f91cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 607729982}
 --- !u!114 &607729982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2179,8 +2192,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -4.77}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0.18, y: -4.37}
+  m_SizeDelta: {x: 62.90915, y: 62.90915}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1663218103
 GameObject:

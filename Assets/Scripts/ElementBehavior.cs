@@ -68,8 +68,11 @@ public class ElementBehavior : MonoBehaviour
 
             
             yield return new WaitUntil(() => transform.position.y == -3);
-            manager.elements[index] = this;
-            index++;
+            if(index < 3)
+            {
+                manager.elements[index] = this;
+                index++;
+            }
             manager.SetImages();
             //Memory.isReadyToSet = true;
             machine.isStopped = false;
