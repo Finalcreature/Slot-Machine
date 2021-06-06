@@ -21,10 +21,11 @@ public class Paint : MonoBehaviour
     void Update()
     {
         localScale = new Vector2(slider.value, slider.value);
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 || Input.GetKey(KeyCode.Mouse0)) 
         {
-            Vector2 mousePos = Input.GetTouch(0).position;
-            Vector2 objPosition = Camera.main.ScreenToWorldPoint(mousePos);
+            // Vector2 mousePos = Input.GetTouch(0).position;
+            Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+             Vector2 objPosition = Camera.main.ScreenToWorldPoint(mousePos);
             Instantiate(baseDot, objPosition, transform.rotation);
         }
        
@@ -40,7 +41,7 @@ public class Paint : MonoBehaviour
     IEnumerator GetSprite()
     {
        
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         fuckit = Resources.Load<Sprite>("Sprite/CameraScreenshot");
         SceneManager.LoadScene(2);
     }
