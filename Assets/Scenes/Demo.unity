@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 231441629}
   - component: {fileID: 231441628}
   m_Layer: 5
-  m_Name: InputField (1)
+  m_Name: New Title Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -551,6 +551,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1479184770}
         m_MethodName: SetInvention
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1479184770}
+        m_MethodName: GetNewTitleText
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -850,7 +861,7 @@ GameObject:
   - component: {fileID: 593704248}
   - component: {fileID: 593704247}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: DiscribeInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -930,6 +941,17 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1479184770}
+        m_MethodName: GetDiscribeText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1479184770}
         m_MethodName: SetInventionDescription
         m_Mode: 5
@@ -1994,7 +2016,7 @@ GameObject:
   - component: {fileID: 1555846661}
   - component: {fileID: 1555846660}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ExampleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
