@@ -56,15 +56,18 @@ public class Manager : MonoBehaviour
         panel.SetActive(false);
 
         }
+    private void EnableDrawButton()
+    {
+       if (inputTitle.text != "" && inputDescription.text != "")
+        {
+            paintSceneLoadButton.interactable = true;
+        }
 
+    }
     private void Update()
     {
+        EnableDrawButton();
 
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            LoadNextScene();
-        }
         if (Memory.isReadyToSet)
         {
             Memory.isReadyToSet = false;
@@ -168,7 +171,7 @@ public class Manager : MonoBehaviour
 
     public void LoadPaintScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(1);
     }
 
    

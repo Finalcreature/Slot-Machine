@@ -21,10 +21,10 @@ public class Paint : MonoBehaviour
     void Update()
     {
         localScale = new Vector2(slider.value, slider.value);
-        Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        Vector2 objPosition = Camera.main.ScreenToWorldPoint(mousePos);
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.touchCount > 0)
         {
+          Vector2 mousePos = Input.GetTouch(0).deltaPosition;
+            Vector2 objPosition = Camera.main.ScreenToWorldPoint(mousePos);
             Instantiate(baseDot, objPosition, transform.rotation);
         }
        
