@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/DrawScene.unity
     guid: ea68c869e639d5745a0681601dec10c1
   - enabled: 1
-    path: Assets/Scenes/3rd Scene.unity
+    path: Assets/Scenes/RankScene.unity
     guid: 5bfb05ec951aa5b4595c3ca5719c082f
   m_configObjects: {}

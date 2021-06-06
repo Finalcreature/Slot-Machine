@@ -39,8 +39,9 @@ public class Paint : MonoBehaviour
     }
     IEnumerator GetSprite()
     {
+       
+        yield return new WaitForSeconds(2);
         fuckit = Resources.Load<Sprite>("Sprite/CameraScreenshot");
-        yield return new WaitUntil(() => fuckit != null);
         SceneManager.LoadScene(2);
     }
 }
