@@ -9,13 +9,13 @@ public class Manager : MonoBehaviour
     public ElementBehavior[] elements = new ElementBehavior[3];
     [SerializeField] Image[] images;
     [SerializeField] InputField inputTitle, inputDescription;
-    public string inventionName;
+    public static string inventionNameInManager;
     [SerializeField] Text example;
     [SerializeField] GameObject panel;
     [SerializeField] Image icon;
     bool isShowing;
     public bool isChosen;
-    string inventionDesc;
+    public static string  inventionDesc;
     string exampleName;
     int completionIndexForInputFields;
 
@@ -143,11 +143,11 @@ public class Manager : MonoBehaviour
 
     public void SetInvention(string value)
     {      
-        inventionName = value;
+        inventionNameInManager = value;
         completionIndexForInputFields++;
         if(completionIndexForInputFields == 2)
         {
-
+            SceneManager.LoadScene("SampleScene");
         }
     }
 
@@ -157,7 +157,7 @@ public class Manager : MonoBehaviour
         completionIndexForInputFields++;
         if (completionIndexForInputFields == 2)
         {
-
+            SceneManager.LoadScene("SampleScene");
         }
     }
 
